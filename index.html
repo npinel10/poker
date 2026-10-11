@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trident Space KO — Guide de ranges &amp; stratégie (Winamax)</title>
+<meta name="description" content="Guide complet et interactif du format Trident Space KO de Winamax : ranges d'open, de défense, de 3-bet et de push/fold en 3-max hyper-turbo à bounty progressif.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A0%EF%B8%8F%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand"><span class="trident-icon">&#9701;</span> Trident Space KO — Guide</div>
+    <nav class="tabs">
+      <button class="nav-btn" data-tab="accueil">Accueil</button>
+      <button class="nav-btn" data-tab="format">Le format</button>
+      <button class="nav-btn" data-tab="explorateur">Explorateur de ranges</button>
+      <button class="nav-btn" data-tab="pushfold">Fiches Push/Fold</button>
+      <button class="nav-btn" data-tab="strategie">Stratégie ICM &amp; Bounty</button>
+      <button class="nav-btn" data-tab="lexique">Lexique</button>
+      <button class="nav-btn" data-tab="methodologie">Méthodologie</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- ================= ACCUEIL ================= -->
+  <section id="accueil" class="tab-panel">
+    <div class="hero">
+      <h1>Maîtrise le <span>Trident Space KO</span> sur Winamax</h1>
+      <p class="lead">
+        Un guide gratuit et complet dédié au format 3-max hyper-turbo à élimination
+        (bounty) progressive : ranges d'ouverture, ranges de défense, 3-bet, 4-bet
+        et push/fold, ajustables en temps réel selon la position et la profondeur
+        de stack — plus la théorie ICM/bounty qui va avec.
+      </p>
+      <div class="cta-row">
+        <button class="btn" data-tab="explorateur" onclick="document.querySelector('[data-tab=explorateur]').click()">Ouvrir l'explorateur de ranges</button>
+        <button class="btn secondary" onclick="document.querySelector('[data-tab=format]').click()">Comprendre le format</button>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="stat-box"><div class="num">3-max</div><div class="label">Table à 3 joueurs, dynamique proche du heads-up</div></div>
+      <div class="stat-box"><div class="num">Hyper-turbo</div><div class="label">Blinds très rapides, jeu orienté push/fold</div></div>
+      <div class="stat-box"><div class="num">KO progressif</div><div class="label">Chaque élimination rapporte du cash immédiat + augmente ta prime</div></div>
+    </div>
+
+    <div class="card">
+      <h2>Ce que tu vas trouver ici</h2>
+      <ul class="plain">
+        <li><strong>Explorateur de ranges interactif</strong> : choisis ta position (BTN, SB, BB), le scénario (open, défense, 3-bet…) et la profondeur de stack (2 à 50 bb) pour voir la range recommandée s'actualiser en direct, avec un ajustement optionnel « bounty ».</li>
+        <li><strong>Fiches Push/Fold</strong> imprimables pour les stacks classiques (20bb → 2bb), les 4 spots les plus fréquents en un coup d'œil.</li>
+        <li><strong>Stratégie ICM &amp; Bounty</strong> : comment le format 3-max et la prime progressive changent tes décisions par rapport à un MTT classique.</li>
+        <li><strong>Lexique</strong> complet du vocabulaire du KO / 3-max / push-fold.</li>
+        <li><strong>Méthodologie</strong> transparente : d'où viennent les chiffres, et leurs limites.</li>
+      </ul>
+      <div class="callout">
+        ⚠️ Les ranges de ce site sont des <strong>repères d'entraînement</strong> construits à partir de principes de push/fold et de théorie 3-max largement documentés (voir la page Méthodologie). Ce ne sont pas des exports de solveur spécifiques à Winamax : elles sont là pour t'aider à construire une base solide et cohérente, à affiner ensuite avec ton propre travail (solveur, reviews, tendances de tes adversaires).
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FORMAT ================= -->
+  <section id="format" class="tab-panel">
+    <div class="card">
+      <h2>Qu'est-ce que le Trident Space KO ?</h2>
+      <p>
+        Le <strong>Trident</strong> est un format de tournoi Winamax joué en <strong>3-max</strong>
+        (trois joueurs par table, comme les trois pointes d'un trident) plutôt qu'en full-ring
+        ou 6-max. La variante <strong>Space KO</strong> y ajoute une structure
+        <strong>hyper-turbo</strong> (blindes qui montent très vite) et un système de
+        <strong>bounty progressif</strong> (Knock-Out) : chaque joueur porte une prime sur sa
+        tête, et éliminer un adversaire te rapporte immédiatement une partie de sa prime tout
+        en augmentant la tienne pour le reste du tournoi.
+      </p>
+      <p>
+        Comme dans toute la gamme de tournois KO progressifs, la prime totale d'un joueur est
+        généralement scindée en deux au moment de l'élimination : une moitié est créditée
+        <strong>cash immédiatement</strong> à celui qui réalise le KO, l'autre moitié vient
+        <strong>s'ajouter à sa propre prime</strong>, qui grossit donc au fil du tournoi. Cela crée
+        un vrai levier stratégique : plus tu élimines de joueurs, plus ta tête devient une cible
+        rentable pour les autres, mais plus tu accumules aussi du cash garanti indépendamment
+        de ton classement final.
+      </p>
+      <div class="callout">
+        Les paramètres exacts (stack de départ, cadence des blindes, répartition précise de la
+        prime, taille du champ) peuvent évoluer selon l'édition du tournoi sur Winamax — réfère-toi
+        toujours à la description du tournoi dans le lobby pour les chiffres exacts. Les principes
+        stratégiques ci-dessous restent valables quelle que soit la variante précise.
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Pourquoi le 3-max change tout</h3>
+        <ul class="plain">
+          <li>Il n'y a que <strong>trois positions</strong> préflop : BTN (qui poste aussi le rôle de première position), SB, BB. Il n'y a pas d'UTG, de MP ou de CO : le BTN est directement le premier à parler.</li>
+          <li>Le <strong>BTN ouvre très large</strong> car il n'a que deux adversaires derrière lui, et joue quasiment à chaque main.</li>
+          <li>La <strong>SB</strong>, quand le BTN a foldé, se retrouve dans une dynamique proche du heads-up face à la BB : elle peut ouvrir encore plus large que le BTN.</li>
+          <li>La <strong>BB</strong> ne relance jamais en premier (elle est toujours la dernière à parler préflop) mais défend très large grâce à ses cotes du pot et à sa position (elle parle en dernier post-flop face à la SB, en dernier aussi face au BTN si la SB a foldé).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Pourquoi l'hyper-turbo change tout</h3>
+        <ul class="plain">
+          <li>Les blindes montent vite : le <strong>stack effectif en bb chute rapidement</strong>, donc la majorité des mains se jouent en dessous de 25bb, souvent en push/fold pur.</li>
+          <li>Il y a peu de place pour le jeu post-flop complexe : la qualité de ta décision <strong>préflop</strong> (quand pousser, quand suivre, quand fold) est le facteur qui pèse le plus sur ton résultat.</li>
+          <li>Le <strong>limp est quasiment toujours une erreur</strong> : en 3-max hyper-turbo, on ouvre en relance (ou en shove) ou on fold.</li>
+          <li>La variance est élevée : accepter des spots légèrement -EV en jetons mais +EV en équité de bounty fait partie intégrante d'une stratégie optimale (voir la page Stratégie).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>L'ordre d'action préflop en 3-max</h2>
+      <table class="data-table">
+        <thead><tr><th>Étape</th><th>Qui parle</th><th>Situation</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>BTN</td><td>Premier à parler : open (relance) ou fold. Pas d'antécédent, donc décision « pure ».</td></tr>
+          <tr><td>2</td><td>SB</td><td>Si le BTN a ouvert : call / 3-bet / fold. Si le BTN a foldé : c'est à la SB d'ouvrir ou de fold.</td></tr>
+          <tr><td>3</td><td>BB</td><td>Parle toujours en dernier préflop : call / 3-bet / fold face à l'action du BTN et/ou de la SB.</td></tr>
+        </tbody>
+      </table>
+      <p class="callout">
+        Astuce de lecture : dans l'explorateur, sélectionne d'abord la position, puis le
+        scénario correspondant (« Open », « Défense face à… », « Face à un 3-bet »). Les
+        options changent automatiquement selon la position, exactement comme l'ordre d'action réel.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= EXPLORATEUR ================= -->
+  <section id="explorateur" class="tab-panel">
+    <div class="card">
+      <h2>Explorateur de ranges interactif</h2>
+      <p>Choisis ta position, le scénario, la profondeur de stack effective (en bb), et active éventuellement l'ajustement bounty. La grille se met à jour instantanément.</p>
+
+      <div class="explorer-controls">
+        <div class="control-group">
+          <label>Position</label>
+          <div class="position-buttons">
+            <button class="position-btn active" data-position="BTN">BTN</button>
+            <button class="position-btn" data-position="SB">SB</button>
+            <button class="position-btn" data-position="BB">BB</button>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Scénario</label>
+          <select id="scenario-select"></select>
+        </div>
+
+        <div class="control-group">
+          <label>Profondeur de stack effectif</label>
+          <div class="slider-wrap">
+            <input type="range" id="bb-slider" min="2" max="50" step="1" value="20">
+            <span id="bb-value">20 bb</span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label>Ajustement</label>
+          <div class="toggle-wrap">
+            <input type="checkbox" id="bounty-toggle">
+            <label for="bounty-toggle" style="text-transform:none;font-size:0.88rem;">Prendre en compte le bounty (Space KO)</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="explorer-layout">
+        <div>
+          <div id="explorer-total"></div>
+          <div id="explorer-grid" class="hand-grid"></div>
+        </div>
+        <div>
+          <h3 style="margin-top:0;">Lecture du scénario</h3>
+          <p id="explorer-info"></p>
+          <div id="explorer-legend" class="legend-row" style="flex-direction:column;align-items:flex-start;"></div>
+          <div class="callout" style="margin-top:20px;">
+            Sous 15bb, l'ouverture devient un <strong>shove</strong> (push/fold pur) : plus de
+            relance standard. Au-delà de 25bb, un 3-bet peut redevenir un <strong>call plat</strong>
+            plutôt qu'un all-in direct côté ouvreur qui doit y répondre.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUSH/FOLD ================= -->
+  <section id="pushfold" class="tab-panel">
+    <div class="card">
+      <h2>Fiches Push/Fold rapides</h2>
+      <p>
+        Les 4 spots les plus fréquents en Trident Space KO, aux profondeurs de stack
+        classiques. Chaque mini-grille montre la range recommandée (voir couleurs dans
+        l'explorateur : bleu = open, rouge = shove, vert = call, orange = 3-bet).
+        Idéal à garder ouvert en second écran pendant tes sessions.
+      </p>
+      <div id="cheatsheets-root"></div>
+    </div>
+  </section>
+
+  <!-- ================= STRATEGIE ================= -->
+  <section id="strategie" class="tab-panel">
+    <div class="card">
+      <h2>ICM, bounty et 3-max : ce qui change vraiment</h2>
+      <p>
+        En tournoi classique (sans KO), la théorie ICM dit essentiellement :
+        <em>tes jetons valent proportionnellement moins cher à mesure que ton stack grossit</em>,
+        ce qui pousse à resserrer certaines ranges de call par rapport au pur EV en jetons,
+        surtout proche de la bulle. Le format KO progressif ajoute une couche supplémentaire :
+        chaque adversaire porte un <strong>prix sur sa tête</strong>, et cette prime doit entrer
+        dans le calcul.
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <h3>Pourquoi on pousse plus large</h3>
+        <p>
+          Quand tu shove, tu gagnes sur deux tableaux si l'adversaire call et perd : les jetons
+          <strong>et</strong> le cash immédiat de sa prime. Ce gain de bounty n'existe pas quand
+          tu fold ou quand tu te contentes de gagner le pot sans éliminer personne. Résultat :
+          une main légèrement -EV en jetons purs peut devenir +EV globalement une fois la prime
+          ajoutée à l'équation, surtout face à un adversaire dont la prime est élevée par
+          rapport à son stack.
+        </p>
+      </div>
+      <div class="card">
+        <h3>Pourquoi on call parfois plus serré</h3>
+        <p>
+          À l'inverse, quand c'est TOI qui es à tapis et que tu risques d'être éliminé, ta
+          propre prime est en jeu : la perdre a un coût qui dépasse la simple valeur de tes
+          jetons (tu offres un bonus à celui qui t'élimine). Cela justifie de <strong>resserrer
+          légèrement tes calls</strong> dans les spots où le risque d'élimination est réel et où
+          gagner ne rapporte « que » des jetons, sans bounty à la clé pour toi (par exemple
+          suivre un tapis sans être toi-même à égalité de mise all-in).
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Les ajustements clés en pratique</h2>
+      <ol class="steps">
+        <li><strong>Élargis tes shoves</strong> contre les stacks courts et les gros bounty relatifs à leur stack (souvent des joueurs déjà entrés dans la zone push/fold).</li>
+        <li><strong>Resserre légèrement tes calls</strong> quand tu es toi-même covered (l'adversaire a plus de jetons que toi) et que perdre te met dehors sans compensation de bounty.</li>
+        <li><strong>Priorise les spots d'élimination</strong> : en 3-max, chaque table ne compte que 3 joueurs — éliminer quelqu'un te rapproche vite du heads-up puis du 1v1 final, où la variance et la structure de gains changent encore.</li>
+        <li><strong>Ne néglige pas le pur jeu de position</strong> : même avec l'effet bounty, une main trop faible reste trop faible. Le bounty déplace les curseurs, il ne les inverse pas.</li>
+        <li><strong>Pense à la taille relative des primes</strong> : un adversaire avec un gros bounty et un petit stack est une cible prioritaire ; un adversaire avec un stack profond et un petit bounty se joue plus proche du pur ICM/chip EV classique.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Erreurs fréquentes en Trident Space KO</h2>
+      <div class="two-col-list">
+        <div>❌ Limper au lieu d'ouvrir en relance/shove</div>
+        <div>❌ Sur-ajuster le bounty et payer des calls très larges sans réel risque de bust pour l'adversaire</div>
+        <div>❌ Jouer une range de BTN trop serrée (proche d'un 6-max)</div>
+        <div>❌ Oublier que la BB parle en dernier et sous-défendre</div>
+        <div>❌ Continuer en flat-call à un stack où le shove est strictement supérieur</div>
+        <div>❌ Ignorer la taille du bounty adverse dans la décision de call</div>
+        <div>❌ Sur-3-bet-bluffer profond sans plan pour la relance de stack derrière</div>
+        <div>❌ Négliger l'ICM pur en fin de tournoi (le bounty n'annule pas l'ICM, il s'y ajoute)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LEXIQUE ================= -->
+  <section id="lexique" class="tab-panel">
+    <div class="card">
+      <h2>Lexique</h2>
+      <dl class="glossary">
+        <dt>3-max</dt>
+        <dd>Format de table à trois joueurs seulement (BTN, SB, BB), au lieu de 6 ou 9 en full-ring.</dd>
+
+        <dt>Hyper-turbo</dt>
+        <dd>Structure de blindes qui augmente très rapidement (souvent toutes les 3 à 5 minutes), obligeant à jouer un stack effectif en bb qui diminue vite.</dd>
+
+        <dt>KO / Bounty</dt>
+        <dd>Format où chaque joueur porte une prime ; l'éliminer rapporte cette prime (en tout ou en partie) au joueur qui réalise le KO.</dd>
+
+        <dt>Bounty progressif</dt>
+        <dd>Variante de KO où la prime gagnée en éliminant un adversaire n'est versée qu'à moitié en cash immédiat, l'autre moitié s'ajoutant à ta propre prime pour la suite du tournoi.</dd>
+
+        <dt>RFI (Raise First In)</dt>
+        <dd>Relance d'ouverture, quand personne n'a encore parlé avant toi (ici : le BTN, ou la SB si le BTN a foldé).</dd>
+
+        <dt>Stack effectif</dt>
+        <dd>Le plus petit des deux stacks impliqués dans une main, exprimé en big blinds (bb) — c'est la profondeur qui détermine réellement les ranges à jouer.</dd>
+
+        <dt>Push/Fold</dt>
+        <dd>Stratégie où les seules options préflop sont « tapis » ou « fold », sans relance de sizing standard ni call plat — typique en dessous de 15-20bb.</dd>
+
+        <dt>3-bet</dt>
+        <dd>Relance en réponse à une relance d'ouverture (2ᵉ relance de la main).</dd>
+
+        <dt>4-bet</dt>
+        <dd>Relance en réponse à un 3-bet (3ᵉ relance de la main), souvent un shove à ces profondeurs de stack.</dd>
+
+        <dt>ICM (Independent Chip Model)</dt>
+        <dd>Modèle qui convertit ton stack de jetons en valeur monétaire réelle compte tenu de la structure des gains, indépendamment du bounty.</dd>
+
+        <dt>Range</dt>
+        <dd>Ensemble des mains qu'on est censé jouer d'une certaine façon dans une situation donnée (ex : range d'open du BTN à 20bb).</dd>
+
+        <dt>Combos</dt>
+        <dd>Nombre de combinaisons de cartes possibles pour une main donnée (6 pour une paire, 4 pour une main assortie, 12 pour une main dépareillée), sur un total de 1326 mains de départ possibles.</dd>
+
+        <dt>Cote du pot</dt>
+        <dd>Rapport entre la mise à payer et la taille du pot après ta mise, utilisé pour juger si un call est rentable en pur EV jetons.</dd>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ================= METHODOLOGIE ================= -->
+  <section id="methodologie" class="tab-panel">
+    <div class="card">
+      <h2>Méthodologie &amp; limites</h2>
+      <p>
+        Ce site n'est pas un export de solveur spécifique au format Winamax Trident Space KO
+        (les paramètres exacts de blindes, d'antes et de répartition du bounty ne sont pas
+        rendus publics de façon exhaustive et évoluent selon les éditions). Les ranges
+        affichées sont un <strong>outil d'entraînement</strong> construit selon la méthode suivante,
+        pour rester cohérent et transparent plutôt que d'inventer des chiffres présentés comme
+        exacts.
+      </p>
+
+      <h3>1. Classement de force des mains</h3>
+      <p>
+        Les 169 mains de départ possibles sont classées via la <strong>formule de Chen</strong>
+        (méthode publiée par David Sklansky), qui attribue un score selon la hauteur des cartes,
+        le fait d'être une paire, d'être assortie, et la connectivité (gap). Ce score donne un
+        ordre de force reproductible, cohérent avec les ranges réelles publiées dans la
+        littérature sur le heads-up et le 3-max.
+      </p>
+
+      <h3>2. Courbes de largeur de range par profondeur</h3>
+      <p>
+        Pour chaque scénario (open BTN, open SB, défense BB vs BTN, défense BB vs SB, défense SB
+        vs BTN, réponse à un 3-bet), une courbe donne le <strong>pourcentage de combos à jouer</strong>
+        selon le stack effectif (de 2 à 50bb). Ces courbes s'inspirent :
+      </p>
+      <ul class="plain">
+        <li>des tables d'équilibre <strong>Nash heads-up push/fold</strong>, largement publiées et utilisées comme référence pour le jeu à effectif très réduit ;</li>
+        <li>des ranges d'ouverture standards documentées pour le <strong>3-max hyper-turbo</strong> (plus larges qu'en 6-max/9-max à profondeur équivalente) ;</li>
+        <li>du principe que sous ~15bb, l'ouverture optimale devient un push/fold pur, et qu'au-delà de ~25bb un jeu de relance/call standard redevient possible.</li>
+      </ul>
+
+      <h3>3. Découpage en actions (fold / call / 3-bet / shove)</h3>
+      <p>
+        À l'intérieur d'une range de continuation, les combos les mieux classés (formule de Chen)
+        sont affectés à l'action la plus agressive (3-bet/shove), le reste à l'action de
+        continuation la plus « passive » (call), le reste étant fold. La proportion allouée au
+        3-bet/shove diminue à mesure que le stack s'approfondit (cohérent avec le fait qu'un jeu
+        plus profond permet davantage de calls plats et de jeu post-flop).
+      </p>
+
+      <h3>4. Ajustement bounty (optionnel, case à cocher)</h3>
+      <p>
+        Quand l'ajustement est activé, les actions à potentiel d'élimination directe (shove, ou
+        3-bet/4-bet qui devient all-in) sont élargies d'environ 8%, et la portion « call sans
+        élimination immédiate » de la range est resserrée d'environ 7%. C'est une simplification
+        pédagogique du principe exposé dans la page Stratégie — un vrai calcul ICM+bounty exact
+        dépend du montant précis des primes de chacun, qui varie à chaque main réelle.
+      </p>
+
+      <div class="callout">
+        Pour un travail de précision (préparation à un gros tournoi, review de mains spécifiques),
+        utilise un solveur dédié aux formats ICM/bounty (GTO Wizard ICMIZER, HRC, etc.) avec les
+        paramètres exacts du tournoi que tu joues. Ce site est fait pour construire de bons
+        réflexes et une intuition solide, pas pour remplacer un calcul exact main par main.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    Guide indépendant et non officiel sur le format « Trident Space KO ». Winamax est une marque
+    déposée de ses propriétaires respectifs ; ce site n'est ni édité ni affilié à Winamax. Jouer
+    comporte des risques financiers : fixe-toi des limites. 18+.
+  </div>
+</footer>
+
+<script src="js/hands.js"></script>
+<script src="js/ranges.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
